@@ -1,6 +1,7 @@
 import Auction from "../models/Auction.js";
 import Bid from "../models/Bid.js";
 
+// ✅ Place a new bid
 export const placeBid = async (req, res) => {
   try {
     const { auctionId } = req.params;
@@ -24,6 +25,31 @@ export const placeBid = async (req, res) => {
     await bid.save();
 
     res.status(201).json(bid);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// ✅ Get all bids (for frontend display)
+export const getBids = async (req, res) => {
+  try {
+    const bids = await Bid.find()
+      .populate("auction", "vehicle startPrice status")
+      .sort({ createdAt: -1 }); // newest first
+    res.json(bids);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// ✅ Get all bids for a specific auction
+export const getBidsByAuction = async (req, res) => {
+  try {
+    const { auctionId } = req.params;
+    const bids = await Bid.find({ auction: auctionId })
+      .sort({ amount: -1 })
+      .populate("auction", "vehicle startPrice status");
+    res.json(bids);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

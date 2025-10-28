@@ -1,0 +1,98 @@
+/* AddVehicle.css */
+
+/* Background and layout */
+.add-vehicle-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Card */
+.add-vehicle-card {
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-vehicle-card:hover {
+    transform: translateY(-5px);
+}
+
+/*  Heading */
+.add-vehicle-card h2 {
+    text-align: center;
+    color: #4b0082;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* Form Inputs */
+.add-vehicle-form label {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.add-vehicle-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.add-vehicle-form input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 4px rgba(118, 75, 162, 0.4);
+    outline: none;
+}
+
+/*  Field Spacing */
+.form-group {
+    margin-bottom: 16px;
+}
+
+/*  Button */
+.add-vehicle-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #764ba2, #667eea);
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-vehicle-btn:hover {
+    background: linear-gradient(90deg, #5a35a4, #5761d1);
+    transform: translateY(-2px);
+}
+
+/*  Responsive */
+@media (max-width: 480px) {
+    .add-vehicle-card {
+        padding: 25px;
+    }
+
+    .add-vehicle-card h2 {
+        font-size: 22px;
+    }
+
+    .add-vehicle-btn {
+        font-size: 15px;
+    }
+}

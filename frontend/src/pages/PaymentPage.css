@@ -1,0 +1,75 @@
+/* PaymentPage.css */
+
+.payment-container {
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4b0082;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 4px rgba(118, 75, 162, 0.4);
+  outline: none;
+}
+
+.payment-btn {
+  background: linear-gradient(90deg, #764ba2, #667eea);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.payment-btn:hover {
+  background: linear-gradient(90deg, #5a35a4, #5761d1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .payment-container {
+    padding: 20px;
+  }
+  .payment-title {
+    font-size: 24px;
+  }
+}

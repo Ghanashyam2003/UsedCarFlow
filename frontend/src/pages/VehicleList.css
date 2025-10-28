@@ -1,0 +1,102 @@
+/* VehicleList.css */
+
+.vehicle-list-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vehicle-list-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #4b0082;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.vehicle-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.vehicle-table thead {
+  background: linear-gradient(90deg, #764ba2, #667eea);
+  color: white;
+}
+
+.vehicle-table th,
+.vehicle-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.vehicle-table tbody tr {
+  border-bottom: 1px solid #e8e8e8;
+  transition: background 0.3s ease;
+}
+
+.vehicle-table tbody tr:hover {
+  background-color: #f9f7ff;
+}
+
+.status-cell {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-cell::first-letter {
+  text-transform: uppercase;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.action-link {
+  text-decoration: none;
+  background: linear-gradient(90deg, #764ba2, #667eea);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.action-link:hover {
+  background: linear-gradient(90deg, #5a35a4, #5761d1);
+  transform: translateY(-2px);
+}
+
+.empty-text {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  padding: 20px 0;
+}
+
+@media (max-width: 700px) {
+  .vehicle-list-container {
+    padding: 20px;
+  }
+
+  .vehicle-table th,
+  .vehicle-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .action-link {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
