@@ -1,7 +1,6 @@
 import Auction from "../models/Auction.js";
 import Bid from "../models/Bid.js";
 
-// ✅ Place a new bid
 export const placeBid = async (req, res) => {
   try {
     const { auctionId } = req.params;
@@ -30,7 +29,7 @@ export const placeBid = async (req, res) => {
   }
 };
 
-// ✅ Get all bids (for frontend display)
+
 export const getBids = async (req, res) => {
   try {
     const bids = await Bid.find()
@@ -42,7 +41,6 @@ export const getBids = async (req, res) => {
   }
 };
 
-// ✅ Get all bids for a specific auction
 export const getBidsByAuction = async (req, res) => {
   try {
     const { auctionId } = req.params;
